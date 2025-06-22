@@ -34,13 +34,13 @@
   }
 
   /* Crossover banner */
-  /* Crossover banner */
 .crossover-banner {
   position: relative;
-  height: 240px;
+  /* height: 240px; */
+  height: 12rem;
   background-image: var(--banner-bg);
   background-size: cover;
-  background-position: center;
+  background-position: 0 40%;
   filter: brightness(0.9);
 }
 
@@ -60,7 +60,7 @@
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
-  justify-content: center; /* Center align logos horizontally */
+  justify-content: center;
   gap: 1.5rem;
   color: white;
   font-weight: 700;
@@ -68,6 +68,28 @@
   user-select: none;
   z-index: 1;
   width: 20rem;
+  max-width: 90vw;
+  padding: 0 1rem;
+}
+
+.banner-logos img {
+  height: auto;
+  max-height: 60px;
+  max-width: 40vw; 
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 1;
+}
+
+@media (max-width: 768px) {
+  .banner-logos {
+    width: 90vw;
+    gap: 1rem;
+  }
+  .banner-logos img {
+    max-height: 45px;
+    max-width: 35vw;
+  }
 }
 
   .banner-logos svg {
@@ -152,11 +174,10 @@
 
 <div class="crossover-banner" aria-label="合作橫幅背景圖">
   <div class="banner-logos" role="img" aria-label="台我通醫療與萊佛士醫療集團合作標誌">
-    <!-- Your logo inline SVG -->
-    <img src="https://www.taiwotonghk.com/wp-content/uploads/2025/05/TWT_PageLogo.svg" alt="台我通醫療標誌" />
-    <span class="multiply-symbol" aria-hidden="true">×</span>
-    <img src="https://www.rafflesmedicalgroup.com/wp-content/uploads/2023/05/raffles-medical-group-logo-2023.svg" alt="萊佛士醫療集團標誌" />
-  </div>
+  <img src="https://www.taiwotonghk.com/wp-content/uploads/2025/05/TWT_PageLogo.svg" alt="台我通醫療標誌" />
+  <span class="multiply-symbol" aria-hidden="true">×</span>
+  <img src="https://www.rafflesmedicalgroup.com/wp-content/uploads/2023/05/raffles-medical-group-logo-2023.svg" alt="萊佛士醫療集團標誌" />
+</div>
 </div>
 
 <div class="crossover-container" role="main" aria-label="中英文合作內容">
