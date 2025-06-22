@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>中醫診所合作頁面 | Crossover Page</title>
+<style>
+  :root {
+    --primary-color: #2e70ba; /* Your main theme color */
+    --partner-color: #008066; /* Partner's theme color */
+    /* --banner-bg: url('https://www.rafflesmedicalgroup.com/wp-content/uploads/2020/09/hk-airport.jpg'); */
+    --banner-bg: url('https://media.timeout.com/images/103968272/image.jpg');
+    --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    color: #222;
+    background: #fff;
+    line-height: 1.5;
+  }
+
+  /* Container for the bilingual crossover page */
+  .crossover-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 4rem;
+  }
+
+  /* Crossover banner */
+  /* Crossover banner */
+.crossover-banner {
+  position: relative;
+  height: 240px;
+  background-image: var(--banner-bg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.9);
+}
+
+/* Overlay for darkening */
+.crossover-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7); /* Lighten the overlay */
+}
+
+/* Logos container on banner */
+.banner-logos {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center align logos horizontally */
+  gap: 1.5rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.6rem;
+  user-select: none;
+  z-index: 1;
+  width: 25%;
+}
+
+  .banner-logos svg {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 0 3px rgba(0,0,0,0.7));
+  }
+
+  .banner-logos .multiply-symbol {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: black;
+    user-select: none;
+  }
+
+  /* Main bilingual content container */
+  .content {
+  display: flex;
+  margin-top: 3rem;
+  gap: 3rem;
+  color: #222;
+  align-items: flex-start; /* Align columns to the top */
+}
+
+.content .column {
+  flex: 1;
+  min-width: 0;
+  padding: 1rem; /* Add padding for consistent spacing */
+}
+
+/* Optional: Set a max-width for each column */
+.content .column {
+  max-width: 600px; /* Adjust as needed */
+}
+
+  /* Chinese column styling */
+  .content .chinese {
+    color: var(--primary-color);
+    font-weight: 600;
+    line-height: 1.6;
+  }
+
+  /* English column styling */
+  .content .english {
+    color: var(--partner-color);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  h2 {
+    margin-top: 0;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  #title-en {
+    border-left: 5px solid var(--partner-color);
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 0.35rem;
+  }
+
+  /* Responsive for mobile: Chinese on top */
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+    .content .column {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="crossover-banner" aria-label="合作橫幅背景圖">
+  <div class="banner-logos" role="img" aria-label="台我通醫療與萊佛士醫療集團合作標誌">
+    <!-- Your logo inline SVG -->
+    <img src="https://www.taiwotonghk.com/wp-content/uploads/2025/05/TWT_PageLogo.svg" alt="台我通醫療標誌" />
+    <span class="multiply-symbol" aria-hidden="true">×</span>
+    <img src="https://www.rafflesmedicalgroup.com/wp-content/uploads/2023/05/raffles-medical-group-logo-2023.svg" alt="萊佛士醫療集團標誌" />
+  </div>
+</div>
+
+<div class="crossover-container" role="main" aria-label="中英文合作內容">
+  <div class="content">
+    <!-- Chinese left column -->
+    <section class="column chinese" lang="zh-Hant" aria-labelledby="title-zh">
+      <h2 id="title-zh">香港國際機場醫療中心</h2>
+      <p>萊佛士醫療 – 香港國際機場是一所於1998年開業的一站式醫療中心。泰和堂現為香港國際機場醫療中心提供中醫診療服務，服務範疇包括內科診症、皮膚科、婦兒科、針灸痛證、正骨復位，拔罐及各類儀器治療。</p>
+      <p>機場醫療中心自1998年起運作，由新加坡萊佛士醫療集團 (Raffles Medical) 承辦，為機場職員及旅客提供一站式醫療中心，包括普通科、職業及外遊健康藥物、物理治療等。</p>
+      <strong>中醫專科服務，全面守護您的健康：</strong>
+      <ul>
+        <li><strong>內科／呼吸系統</strong>：感染疾病、呼吸道過敏治療</li>
+        <li><strong>婦科</strong>：女性健康管理、婦科疾病及生育診斷治療</li>
+        <li><strong>皮膚科</strong>：急慢性及過敏性皮膚問題</li>
+        <li><strong>疼痛管理</strong>：手法治療、針灸、拔罐、筋膜治療，處理急慢性疼痛</li>
+        <li><strong>姿勢與活動調整</strong>：工作及日常姿勢評估與調整</li>
+        <li><strong>免疫調理</strong>：針對壓力或工作引致的免疫功能下降，進行調理</li>
+        <li><strong>腸胃消化科</strong> ：腸胃道急慢性健康問題</li>
+        <li><strong>慢性病管理</strong>：都市常見慢性病、內分泌及荷爾蒙問題、體檢後諮詢</li>
+      </ul>
+      
+      <h3>開放時間</h3>
+      <p>每日24小時開放<br>普通科醫生診症時間：早上 7:00 - 晚上 12:00<br>中醫服務時間：逢週一及五 早上 10:00 - 晚上 7:00<br>全天候有註冊護士值班</p>
+      
+      <h3>聯絡方式</h3>
+      <p>電話: +852 2261 2626<br>WhatsApp：+852 6573 9948<br>泰和堂中醫診所查詢電話: +852 2662 2052<br>泰和堂中醫診所 WhatsApp: +852 6638 5638</p>
+    </section>
+
+    <!-- English right column -->
+    <section class="column english" lang="en" aria-labelledby="title-en">
+      <h2 id="title-en">Raffles Medical – Hong Kong International Airport</h2>
+      <p>Raffles Medical – Hong Kong International Airport is a one-stop medical centre that opened in 1998. Tai Wo Tong Chinese Medicine Group Currently providing exclusive TCM diagnosis and treatment services for the Airport Medical Center.</p>
+      <p>If you feel unwell or need medical assistance while at the Hong Kong International Airport, our airport centre offers general medical, occupational & travel medicine, physiotherapy, Chinese medicine services, and more.</p>
+      <strong>Comprehensive TCM Specialist Services for Your Health:</strong>
+      <ul>
+        <li><strong>Internal Medicine / Respiratory</strong>: Treatment for infectious diseases and respiratory allergies</li>
+        <li><strong>Gynecology</strong>: Women's health management, diagnosis and treatment of gynecological and fertility disorders</li>
+        <li><strong>Dermatology</strong>: Acute, chronic, and allergic skin conditions</li>
+        <li><strong>Pain Management</strong>: Manual therapy, acupuncture, cupping, and fascia therapy for acute and chronic pain</li>
+        <li><strong>Posture & Activity Adjustment</strong>: Assessment and adjustment of posture and daily activities</li>
+        <li><strong>Immune Function Support</strong>: Regulation and improvement of immune function, especially for work or stress-related decline</li>
+        <li><strong>Gastroenterology</strong>: Management of acute and chronic gastrointestinal issues</li>
+        <li><strong>Chronic Disease Management</strong>: Common urban chronic diseases, endocrine and hormonal disorders, and post-examination consultation</li>
+      </ul>
+      <h3>Opening Hours</h3>
+      <p>24 hours daily<br>GP Consultation: 07:00 to 24:00<br>TCM Consultation: Mon & Fri 10:00 to 19:00<br>24/7 with Registered Nurse on duty</p>
+      <h3>Contact</h3>
+      <p>Phone: +852 2261 2626<br>WhatsApp: +852 6573 9948<br>Tai Wo Tong CMC Phone: +852 2662 2052<br>Tai Wo Tong CMC WhatsApp: +852 6638 5638</p>
+    </section>
+  </div>
+</div>
+
+</body>
+</html>
